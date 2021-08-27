@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.layout{
+    display: grid;
+    /* cột  */
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows:350px 100px 350px ;
+    grid-gap : 30px;
+    padding: 30px;
+    
+}
+.layout-item{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.layout-item:first-child{
+    /* grid-colum: track-line-start / track-line-end */
+    /* grid-row : track-line-start /track-line-end  */
+    grid-column : 1/3;
+    grid-row: 1/2;
+    
+}
+
+.layout-item:nth-child(2),.layout-item:nth-child(3){
+    grid-row: 1/3;
+}
+.layout-item:nth-child(4){
+    grid-column : 1/2 ;
+    grid-row:2/4 
+    
+}
+.layout-item:nth-child(5){
+    grid-column: 2/3 ;
+    grid-row: 2/4;
+}
+.layout-item:last-child{
+    grid-column:3/5;
+}
+/* trackline  theo chiều ngang  = số cột + 1  
+/* track line theo chiều dọc = số hàng + 1  */
+/*  khoảng trắng : 
+gap : row-gaps colums gap 
+*/
